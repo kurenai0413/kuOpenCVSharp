@@ -6,5 +6,7 @@ namespace kuOpenCVSharp
     {
     public:
         Class1();
+
+		double kuTestFunction(int a, int b);
     };
 }

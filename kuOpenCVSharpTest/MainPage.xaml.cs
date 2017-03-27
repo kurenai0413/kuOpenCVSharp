@@ -32,9 +32,17 @@ namespace kuOpenCVSharpTest
             wrapper = new Class1();
         }
 
-        private void RunMethod_Click(object sender, RoutedEventArgs e)
+        private void RunMethodBtn_Click(object sender, RoutedEventArgs e)
         {
-            c = wrapper.kuTestFunction(1, 2);
+            int a, b;
+
+            //c = wrapper.kuTestFunction(1, 2);
+            if (int.TryParse(TextBoxA.Text, out a) &&
+                int.TryParse(TextBoxB.Text, out b))
+            {
+                c = a + b;
+            }
         }
+        
     }
 }

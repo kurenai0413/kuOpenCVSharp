@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using kuOpenCVSharp;
+//using kuOpenCVSharp;
 
 //空白頁項目範本收錄在 http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -23,13 +23,13 @@ namespace kuOpenCVSharpTest
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        Class1 wrapper;
+        kuOpenCVSharp.kuOpenCVSharpWrapper SharpWrapper;
         double c;
 
         public MainPage()
         {
             this.InitializeComponent();
-            wrapper = new Class1();
+            SharpWrapper = new kuOpenCVSharp.kuOpenCVSharpWrapper();
         }
 
         private void RunMethodBtn_Click(object sender, RoutedEventArgs e)
@@ -40,7 +40,12 @@ namespace kuOpenCVSharpTest
             if (int.TryParse(TextBoxA.Text, out a) &&
                 int.TryParse(TextBoxB.Text, out b))
             {
-                c = a + b;
+                c = SharpWrapper.kuTestFunctionSharp(a,b);
+                DisplayText.Text = "C: " + c.ToString();
+            }
+            else
+            {
+                DisplayText.Text = "input not integer.";
             }
         }
         

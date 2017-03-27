@@ -2,8 +2,16 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Resources">
-      <UniqueIdentifier>0689f793-7883-44bf-a1ef-5b9df4e0428d</UniqueIdentifier>
+      <UniqueIdentifier>057db38b-1c9d-40d6-ad12-652d1e47a364</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="kuOpenCVWRCWrapper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="kuOpenCVWRCWrapper.h" />
   </ItemGroup>
 </Project>
